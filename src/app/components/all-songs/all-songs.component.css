@@ -1,0 +1,36 @@
+.main-container{
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    margin-top: 40px;
+}
+.main-container .songs{
+    display: grid;
+    grid-template-rows: 1fr;
+    padding: 2px;
+    margin: 2px; 
+    /* max-width: 550px;
+    max-height: 30px; */
+} 
+.container{
+    display: grid;
+    grid-template-rows: 1fr auto 20fr;
+    min-width: 560px;
+}
+.container .title{
+    text-align: center;
+}
+.container .search-bar{
+    display: grid;
+    grid-template-columns: 1fr;
+}
+.songs{
+    overflow-y: scroll;
+    max-height: 90%;
+}
+.search-bar{
+    padding: 2px;
+}
+.input{
+    height: 50px;
+}

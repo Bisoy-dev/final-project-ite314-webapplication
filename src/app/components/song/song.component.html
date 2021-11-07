@@ -1,0 +1,13 @@
+<div class="main" (dblclick)="play(song)" [title]="song.artist">
+    <div [class]="song.id === currentPlay && isPlay ? 'song play' : 'song'">
+        <h3>{{ artistName }}</h3>
+        <div class="info">
+            <p>{{ song.songTitle }}</p>
+            <small>{{ song.releaseDate }}</small>
+        </div> 
+        <div>
+            <i (click)="play(song)" [class]="song.id === currentPlay && isPlay ? 'fas fa-stop' : 'fas fa-play'" [title]="song.id === currentPlay && isPlay ? 'Stop' : 'Play'"></i>
+            <i id="detail" class="fas fa-ellipsis-v" title="Song Info" (click)="detail(song)"></i>
+        </div>
+    </div>
+</div>

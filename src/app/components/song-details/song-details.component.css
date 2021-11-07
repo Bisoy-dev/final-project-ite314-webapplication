@@ -1,0 +1,28 @@
+.main{
+    padding: 12px;
+    display: flex;
+    justify-content: center;
+}
+.song-container{
+    display: grid;
+    grid-template-rows: 2fr 1fr 1fr 1fr;
+    text-align: center;
+}
+.box{
+    padding: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.header{
+    display: flex;
+    justify-content: flex-start;
+} 
+i{
+    font-size: 25px;
+}
+h2{
+    margin: 10px;
+}
+i:hover{
+    color: #FFFCDD;
+}

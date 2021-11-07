@@ -1,0 +1,25 @@
+<div class="main-container"> 
+    <div class="container">
+        <div class="title">
+            <h4>All Songs</h4>
+        </div> 
+        <div class="search-bar">
+            <input class="input" [(ngModel)]="textSearch" type="text" (input)="search()" placeholder="Search Artist, Album, Genre , Song">
+        </div> 
+        <div class="songs" *ngIf="selected == ''"> 
+            <div class="loop-item" *ngFor="let song of songs">
+                <app-song 
+                [song]="song" 
+                (playToggleEvent)="play(song)" 
+                [currentPlay]="currentPlay"
+                [isPlay]="isPlay"
+                (detailEvent)="detail($event)">
+                </app-song>
+            </div>
+        </div>
+        <div *ngIf="selected == 'detail'">
+            <app-song-details [song]="song" (backEvent)="detailBack()"></app-song-details>
+        </div>
+    </div>
+    
+</div>
